@@ -3,13 +3,13 @@ pipeline {
    stages {
     stage ('vcs') {
         step {
-            git branch: 'master' ,
+            git branch: 'main' ,
             url: "https://github.com/madhu0018/Docker.git"
        }
     }
     stage ('package'){
         step{
-            sh 'docker image bulid -t ntr:1.0 .'
+            sh 'docker image build -t ntr:1.0 .'
         }
     }
  }

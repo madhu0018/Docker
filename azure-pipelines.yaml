@@ -1,12 +1,12 @@
 trigger:
-- master
+- main
 
 pool: azuredevops
   
 stages:
   - stage: image
     jobs:  
-      - job: bulid
+      - job: build
         steps:
-          - script: docker image bulid -t ntr:01 .
+          - script: docker image build -t ntr:01 .
 
