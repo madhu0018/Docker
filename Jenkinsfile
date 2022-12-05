@@ -4,7 +4,7 @@ pipeline {
     stage ('vcs') {
         step {
             git branch: 'master' ,
-            url:
+            url: "https://github.com/madhu0018/Docker.git"
        }
     }
     stage ('package'){
